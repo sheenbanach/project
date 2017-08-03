@@ -34,6 +34,12 @@
     }
   </style>
 <body>
+      <% @pictures.each do |picture| %>
+        <%= picture.name %><br>
+        <%= image_tag picture.photo.url(:thumb) %>
+    <% end %>
+ 
+
 <div class="col-sm-9">
       <h4><small>RECENT POSTS</small></h4>
       <hr>
